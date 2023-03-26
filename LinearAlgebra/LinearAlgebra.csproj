@@ -7,4 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="LinearEquations\" />
+    <None Remove="LinearEquations\DirectMethod\" />
+    <None Remove="LinearEquations\Iterative method\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LinearEquations\" />
+    <Folder Include="LinearEquations\DirectMethod\" />
+    <Folder Include="LinearEquations\Iterative method\" />
+  </ItemGroup>
 </Project>

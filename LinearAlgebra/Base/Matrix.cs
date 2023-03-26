@@ -123,6 +123,7 @@
 
         /// <summary>
         /// 返回size行size列的Hilbert矩阵
+        /// 矩阵中值A[i,j]都是1/(i+j+1)
         /// </summary>
         /// <param name="size"></param>
         /// <returns></returns>
@@ -490,20 +491,20 @@
         /// 返回矩阵A的行列式值
         /// </summary>
         /// <returns></returns>
-        //public double Determinant()
-        //{
-        //    return GaussElimination.Determinant(this);
-        //}
+        public double Determinant()
+        {
+            return GaussElimination.Determinant(this);
+        }
 
         /// <summary>
         /// 返回A的逆矩阵；
         /// 当A奇异时，返回null
         /// </summary>
         /// <returns></returns>
-        //public Matrix Inverse()
-        //{
-        //    return GaussElimination.Inverse(this);
-        //}
+        public Matrix Inverse()
+        {
+            return GaussElimination.Inverse(this);
+        }
 
         /// <summary>
         /// 判断是否与m1的所有元素均相同
@@ -535,8 +536,8 @@
         {
             if (begin < 0)
                 throw new Exception("输入的begin值要大于等于0");
-            if (end > ColumnCount || end == ColumnCount)
-                throw new Exception("输入的end值要小于列数");
+            if (end > RowCount)
+                throw new Exception("输入的end值要小于等于列数");
 
             Matrix m = new Matrix(end - begin, ColumnCount);
             for (int i = begin; i < end; i++)
@@ -556,8 +557,8 @@
         {
             if (begin < 0)
                 throw new Exception("输入的begin值要大于等于0");
-            if (end > RowCount || end == RowCount)
-                throw new Exception("输入的end值要小于行数");
+            if (end > ColumnCount)
+                throw new Exception("输入的end值要小于等于列数");
 
             var m = new Matrix(RowCount, end - begin);
             for (int i = 0; i < RowCount; i++)

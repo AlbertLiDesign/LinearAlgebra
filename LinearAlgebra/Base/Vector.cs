@@ -195,7 +195,7 @@
         /// <param name="v1"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public Vector Mutiply(Vector v1)
+        public Vector Multiply(Vector v1)
         {
             if (Length != v1.Length)
                 throw new Exception("两向量元素个数不同，不能按元素相乘！");

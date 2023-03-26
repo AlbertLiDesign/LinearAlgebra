@@ -1,3 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
+
+namespace LinearAlgebra
+{
+    class Program
+    {
+        public static void Main()
+        {
+            Test._ConditionNumber();
+            Console.ReadKey();
+        }
+    }
+}
 
